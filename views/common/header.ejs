@@ -1,0 +1,307 @@
+<?php
+include_once('connect.php');
+session_start();
+?>
+<nav class="navbar navbar-inverse">
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li><a href="/">首页<span class="sr-only">(current)</span></a></li>
+                <li><a href="#">学生</a></li>
+                <li><a href="#">教职工</a></li>
+                <li><a href="#">考生</a></li>
+                <li><a href="#">校友总会</a></li>
+            </ul>
+            <form class="navbar-form navbar-left" role="search" action="/users/search" method="get">
+                <div class="form-group">
+                    <input type="text" class="form-control" name="keyWord">
+                </div>
+                <button type="submit" class="glyphicon glyphicon-search" aria-hidden="true"></button>
+            </form>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#">网上办事大厅</a></li>
+                <li class="pub">
+                    <a href="#" data-toggle="modal" data-target="#login_modal" id="log_in">登录</a>
+                    <div class="modal fade" id="login_modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                                                aria-hidden="true">&times;</span></button>
+                                    <h4 class="modal-title" id="myModalLabel">登录</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <form class="form-horizontal" role="form" id="login_from">
+                                        <div class="form-group has-feedback">
+                                            <label class="col-sm-3 control-label" for="username">账号：</label>
+                                            <div class="col-sm-9">
+                                                <input id="uname" name="username" type="text" required
+                                                       class="form-control"
+                                                       placeholder="请输入6-10位数字字母或下划线">
+                                                <span class="glyphicon  form-control-feedback"></span>
+                                            </div>
+                                        </div>
+                                        <div class="form-group has-feedback">
+                                            <label class="col-sm-3 control-label" for="password">密码：</label>
+                                            <div class="col-sm-9">
+                                                <input id="pwd" name="password" type="password" required
+                                                       class="form-control"
+                                                       placeholder="请输入6-8位包含字母数字特殊字符的密码">
+                                                <span class="glyphicon form-control-feedback"></span>
+                                            </div>
+                                        </div>
+                                        <div class="form-group has-feedback">
+                                            <label class="col-sm-3 control-label" for="yzm">验证码：</label>
+                                            <div class="col-sm-4">
+                                                <input name="yzm" type="text" required class="form-control" id="yzm"
+                                                       placeholder="请输入验证码">
+                                                <span class="glyphicon  form-control-feedback"></span>
+                                            </div>
+                                            <div class="col-sm-5" id="idCode">
+
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="submit" class="btn btn-primary" id="login">登录</button>
+                                            <button type="button" class="btn btn-default" data-dismiss="modal">关闭
+                                            </button>
+                                        </div>
+                                    </form>
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </li>
+                <li class="pub">
+                    <a href="#" data-toggle="modal" data-target="#regist_modal" id="regist">注册</a>
+                    <!-- Modal -->
+                    <div class="modal fade" id="regist_modal" tabindex="-1" role="dialog"
+                         aria-labelledby="myModalLabel">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                                                aria-hidden="true">&times;</span></button>
+                                    <h4 class="modal-title">注册</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <form class="form-horizontal" role="form" id="regist_form">
+                                        <div class="form-group has-feedback">
+                                            <label class="col-sm-3 control-label" for="username">账号：</label>
+                                            <div class="col-sm-9">
+                                                <input name="username" type="text" required class="form-control"
+                                                       id="username" placeholder="请输入6-10位数字字母或下划线">
+                                                <span class="glyphicon  form-control-feedback"></span>
+                                            </div>
+                                        </div>
+                                        <div class="form-group has-feedback">
+                                            <label class="col-sm-3 control-label" for="password">密码：</label>
+                                            <div class="col-sm-9">
+                                                <input name="password" type="password" required class="form-control"
+                                                       id="password"
+                                                       placeholder="请输入6-8位包含字母数字特殊字符的密码">
+
+                                                <span class="glyphicon form-control-feedback"></span>
+                                            </div>
+                                        </div>
+                                        <div class="form-group has-feedback">
+                                            <label class="col-sm-3 control-label" for="repassword">确认密码：</label>
+                                            <div class="col-sm-9">
+                                                <input type="password" required class="form-control" id="repassword"
+                                                       placeholder="请再次输入您的密码">
+                                                <span class="glyphicon  form-control-feedback"></span>
+                                            </div>
+                                        </div>
+                                        <div class="form-group has-feedback">
+                                            <label class="col-sm-3 control-label" for="nc">昵称：</label>
+                                            <div class="col-sm-9">
+                                                <input name="nc" type="text" required id="nc" class="form-control"
+                                                       placeholder="请输入你的昵称">
+                                                <span class="glyphicon  form-control-feedback"></span>
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="submit" class="btn btn-primary">注册</button>
+                                            <button type="button" class="btn btn-default" data-dismiss="modal">关闭
+                                            </button>
+                                        </div>
+                                    </form>
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+
+                <li class="pub" id="showNc"><a href="#"></a></li>
+                <li class="pub" id="logout"><a href="#">注销</a></li>
+                <li><a href="#">邮箱</a></li>
+                <li><a href="#">招聘</a></li>
+                <li><a href="#">招标</a></li>
+                <li><a href="#">English</a></li>
+            </ul>
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+</nav>
+
+<script src="/js/jquery.min.js"></script>
+<script>
+    // toggle();
+    // function toggle() {
+    //     $.getJSON('getUser.php',function (res) {
+    //         $('#showNc a').html(res.nc);
+    //         $('#log_in').hide();
+    //         $('#regist').hide();
+    //         $('#showNc').show();
+    //         $('#showState').show();
+    //         $('#login_modal').modal('hide');
+    //     });
+    // }
+    // $('#showState a').click(function (e) {
+    //     e.preventDefault();
+    //     $.post('logout.php',function (res) {
+    //         $('#showNc').hide();
+    //         $('#showState').hide();
+    //         $('#log_in').show();
+    //         $('#regist').show();
+    //     },'json');
+    // })
+    // $('#login_from').submit(function (e) {
+    //     e.preventDefault();
+    //     $.post('php/login.php',$('#login_from').serialize(),function (res) {
+    //         if (res === 0){
+    //             alert('验证码错误');
+    //         }else if(res === 2){
+    //             alert('用户名或密码错误！');
+    //         }else {
+    //             toggle();
+    //
+    //         }
+    //     },'json')
+    // })
+    // $('#showState a').click(function (e) {
+    //     e.preventDefault();
+    //     $.post('php/logout.php',function (res) {
+    //         $('#showNc').hide();
+    //         $('#showState').hide();
+    //         $('#log_in').show();
+    //         $('#regist').show();
+    //     },'json');
+    // })
+    // function toggle() {
+    //     $.getJSON('php/getUser.php',function (res) {
+    //         $('#showNc a').html(res.nc);
+    //         $('#log_in').hide();
+    //         $('#regist').hide();
+    //         $('#showNc').show();
+    //         $('#showState').show();
+    //         $('#login_modal').modal('hide');
+    //     });
+    // }
+$(function () {
+    //登录后切换
+    toggle();
+    $('#showNc').hide();
+    $('#logout').hide();
+    function toggle() {
+        $.getJSON('/users/isLogin', function (rs) {
+            if (rs) {
+                $('#showNc a').html('欢迎您：'+rs);
+                $('#log_in').hide();
+                $('#regist').hide();
+                $('#showNc').show();
+                $('#logout').show();
+                $('#manage').show();
+            }
+        })
+    }
+
+    //注册
+    $('#regist_form').submit(function (e) {
+        e.preventDefault();
+        if ($('#password').val() !== $('#repassword').val()) {
+            alert('两次密码不一样，请重新输入。');
+            return;
+        }
+        $.post('/users/regist', $('#regist_form').serialize(), function (res) {
+            if (res === 0) {
+                alert('用户名已存在，请重新输入');
+                $('regist_modal').modal('hide');
+            } else if (res === 1) {
+                alert('注册成功');
+                $('regist_modal').modal('hide');
+            } else {
+                alert('注册失败，请稍后再试');
+            }
+        })
+    });
+    //登录
+    $('#log_in').click(function () {
+        $.get('/users/getIdCode', function (rs) {
+            $('#idCode').html(rs.data);
+        });
+    });
+    //获取验证码
+    $('#idCode').click(function () {
+        $.get('/users/getIdCode', function (rs) {
+            $('#idCode').html(rs.data);
+        });
+    });
+    $('#login_from').submit(function (e) {
+        e.preventDefault();
+        $.post('/users/login', $(this).serialize(), function (rs) {
+            if (rs === 0) {
+                alert('验证码错误！');
+            }
+            else if(rs===2){
+                alert('用户名或者密码不对');
+            }else {
+                alert('登陆成功');
+                $('#login_modal').modal('hide');
+                $('#showNc a').html('欢迎您：'+rs[0].nc);
+                $('#log_in').hide();
+                $('#regist').hide();
+                $('#showNc').show();
+                $('#logout').show();
+                $('#manage').show();
+            }
+        });
+
+    });
+    //注销
+    $('#logout').click(function () {
+        $.getJSON('/users/logout',function (rs) {
+            if (rs===1){
+                alert('注销成功！');
+                $('#log_in').show();
+                $('#regist').show();
+                $('#showNc').hide();
+                $('#logout').hide();
+                //当注销的时候在管理页面时，退回到主页
+                if (window.location.href.indexOf('/admin')>0){
+                    window.location.href='/';
+                }
+
+            }
+        })
+    });
+})
+
+</script>

@@ -1,0 +1,101 @@
+@charset "UTF-8";
+main.container header {
+  line-height: 50px;
+  border-bottom: 2px #a3a3a3 solid;
+  margin: 30px 0;
+  padding-left: 15px;
+}
+main.container header h4 {
+  font-weight: bolder;
+}
+main.container header h4 small {
+  font-weight: 800;
+  color: #002F94;
+  margin-left: 10px;
+}
+main.container header h4 span a {
+  color: #454545;
+  font-weight: 100;
+}
+main.container .panel .panel-heading > h3 {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+main.container .panel .panel-body p {
+  margin-top: 10px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+main.container .panel .panel-footer {
+  text-align: right;
+}
+main.container .panel .panel-footer a {
+  color: #4f4f4f;
+}
+main.container .row_2 .media {
+  border-bottom: 1px #bcbcbc solid;
+  padding-bottom: 15px;
+}
+main.container .row_2 .media .media-left > a:hover {
+  text-decoration: none;
+}
+main.container .row_2 .media .media-left > a:hover div {
+  background-color: #505c72;
+}
+main.container .row_2 .media .media-left > a > div {
+  width: 77px;
+  height: 77px;
+  text-align: center;
+  background-color: #5A6989;
+  color: white;
+  padding: 9px 0;
+  border-radius: 5px;
+}
+main.container .row_2 .media .media-left > a > div b {
+  font-size: 30px;
+}
+main.container .row_2 .media .media-left > a > div p {
+  color: white;
+  margin-top: -8px;
+}
+main.container .row_2 .media .media-body > h4 {
+  font-size: 15px;
+  font-weight: 700;
+  margin: 3px 0 10px ;
+}
+main.container .row_2 .media .media-body p {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+main.container .row_3 .col-md-3 {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+main.container .row_3 a {
+  display: block;
+  cursor: pointer;
+  padding: 5px;
+}
+main.container .row_3 a:hover {
+  background-color: #94c4e5;
+  text-decoration: none;
+}
+main.container .row_3 a:hover p {
+  color: white;
+}
+main.container .row_3 a img {
+  width: 100%;
+}
+main.container .row_3 a p {
+  margin-top: 10px;
+  color: #4f4f4f;
+  border-bottom: 1px #dedede solid;
+  padding-bottom: 3px;
+}

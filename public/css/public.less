@@ -1,0 +1,139 @@
+@charset "UTF-8";
+
+.navbar {
+  border-radius: 0;
+  min-height: 40px;
+  background-color: #012269;
+  margin-bottom: 0;
+  .navbar-nav {
+    li {
+      a {
+        padding: 10px;
+        color: #C7CAC1;
+      }
+
+    }
+  }
+  .navbar-right{
+    float: none!important;
+  }
+  .navbar-form {
+
+    .form-control {
+      height: 20px;
+      width: 150px;
+      padding: 0;
+      border-radius: 50px;
+      background-color: #8091B4;
+      border: none;
+    }
+
+    span {
+      color: #C7CAC1;
+      display: inline-block;
+      vertical-align: middle;
+      margin-left: 5px;
+    }
+
+    > .btn {
+      padding: 0;
+    }
+  }
+}
+
+.top{
+  &.container-fluid{
+    padding-right: 0;
+    padding-left: 0;
+  }
+  background: url("../images/top_bg.jpg") no-repeat;
+  .top_logo{
+    background: url("../images/top_icon.png") no-repeat;
+    background-position: right -20px;
+    a{
+      display: block;
+      padding: 10px 0;
+      img{
+        vertical-align: middle;
+      }
+    }
+  }
+  >menu{
+    background: rgba(0,0,200,.2);
+    margin-top: 9px;
+    margin-bottom: 0;
+    position: relative;
+    &.container-fluid{
+      padding-left: 0;
+      padding-right: 0;
+    }
+    >div{
+      display: flex;
+      justify-content: flex-start;
+      font-size: 16px;
+      dl{
+        margin-bottom: 0;
+        &:hover{
+          dd{
+            display: block;
+          }
+        }
+        dt{
+          cursor: pointer;
+          color: white;
+          line-height: 40px;
+          padding: 0 30px;
+          font-weight: 200;
+        }
+        dd{
+          display: none;
+          position: absolute;
+          background-color: rgba(222, 222, 222, 0.81);
+          left: 0;
+          right: 0;
+          top:40px;
+          line-height: 35px;
+          padding: 0 250px;
+          z-index: 20;
+          a{
+            padding: 0 20px;
+            color: black;
+            white-space: nowrap;
+          }
+        }
+      }
+    }
+
+  }
+}
+
+footer.container-fluid{
+  background: url("../images/footer_bg.jpg") no-repeat;
+  color: white;
+  padding-left: 0;
+  padding-right: 0;
+  margin-top: 30px;
+  p{
+    font-size: 13px;
+    line-height: 12px;
+    cursor: pointer;
+  }
+  >div.container{
+    padding-top: 30px;
+    div.col-md-3{
+      >h4{
+        font-size: 15px;
+        padding-bottom: 8px;
+        border-bottom: 1px white solid;
+        margin-bottom: 15px;
+      }
+    }
+  }
+  >p{
+    line-height: 40px;
+    background-color: #041438;
+    text-align: center;
+    margin-top: 20px;
+    color: #7a87a3;
+  }
+}

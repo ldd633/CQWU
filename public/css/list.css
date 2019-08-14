@@ -1,0 +1,160 @@
+@charset "UTF-8";
+ul {
+  list-style: none;
+}
+main {
+  margin-top: 20px;
+}
+main header {
+  line-height: 40px;
+  background-color: #ececec;
+  padding-right: 10px;
+}
+main header span {
+  display: inline-block;
+}
+main header span:first-child {
+  color: #087ab1;
+  background-color: #d4deeb;
+  padding: 0 10px;
+  position: relative;
+}
+main header span:first-child:after {
+  position: absolute;
+  content: "";
+  border: 20px transparent solid;
+  border-left-color: #d4deeb;
+  border-bottom-color: #d4deeb;
+  top: 0;
+  right: -40px;
+}
+main .row_1 ul {
+  padding: 0 10px;
+}
+main .row_1 ul li {
+  height: 45px;
+  line-height: 45px;
+  border-bottom: 1px #e5e5e5 dashed;
+}
+main .row_1 ul li:hover {
+  color: #002F94;
+  border-color: #002F94;
+}
+main .row_1 ul li:hover a {
+  text-decoration: none;
+  color: #002F94;
+}
+main .row_1 ul li a {
+  display: inline-block;
+  color: #4f4f4f;
+  width: 75%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+main .row_2 {
+  margin-top: 20px;
+}
+main .row_2 .content a {
+  display: block;
+  color: #000000;
+  padding: 15px 0;
+  border-bottom: 1px #dddddd dashed;
+}
+main .row_2 .content a:hover {
+  color: #228ed9;
+  text-decoration: none;
+  border-color: #002F94;
+}
+main .row_2 .content a .media{
+  display: flex;
+}
+main .row_2 .content a .media .media-heading {
+  font-size: 14px;
+  color: #434343;
+  font-weight: bolder;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+main .row_2 .content a .media .media-body {
+  font-size: 13px;
+}
+main .row_2 .content a .media .media-body p {
+  line-height: 22px;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+main .row_2 .news > a {
+  display: block;
+  border-bottom: 1px #bcbcbc dashed;
+  padding: 15px 0;
+}
+main .row_2 .news > a:hover {
+  text-decoration: none;
+  border-color: #2070b2;
+}
+main .row_2 .news > a:hover .media .media-left div {
+  border-color: #2070b2;
+}
+main .row_2 .news > a:hover .media .media-body p {
+  color: #217fc7;
+}
+main .row_2 .news > a .media .media-left > span > div {
+  width: 77px;
+  height: 77px;
+  text-align: center;
+  border: 1px transparent solid;
+  color: #2070b2;
+  padding: 9px 0;
+  border-radius: 5px;
+}
+main .row_2 .news > a .media .media-left > span > div b {
+  font-size: 30px;
+}
+main .row_2 .news > a .media .media-left > span > div p {
+  color: #217fc7;
+  margin-top: -8px;
+}
+main .row_2 .news > a .media .media-body > h4 {
+  color: black;
+  font-size: 15px;
+  font-weight: 700;
+  margin: 3px 0 10px;
+}
+main .row_2 .news > a .media .media-body p {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  color: #656565;
+  font-size: 13px;
+  line-height: 20px;
+}
+main .row_2 .dongtai ul a {
+  width: 65%;
+  font-size: 13px;
+}
+main .row_3 {
+  margin-top: 20px;
+}
+main .row_3 div a {
+  display: block;
+  margin-top: 15px;
+  cursor: pointer;
+}
+main .row_3 div a:hover {
+  text-decoration: none;
+  box-shadow: 1px 1px 5px #0098ed;
+}
+main .row_3 div a p {
+  background-color: #dddddd;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding: 5px 10px;
+  color: black;
+}

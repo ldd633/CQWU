@@ -1,0 +1,137 @@
+@charset "UTF-8";
+.navbar {
+  border-radius: 0;
+  min-height: 40px;
+  background-color: #012269;
+  margin-bottom: 0;
+}
+.navbar .navbar-nav li a {
+  padding: 10px;
+  color: #C7CAC1;
+}
+.navbar .navbar-right {
+  float: none!important;.navbar .navbar-form .form-control
+}
+button.glyphicon.glyphicon-search {
+  background: none;
+  border: none;
+}
+.navbar-form .form-group{
+  vertical-align: bottom;
+}
+.glyphicon-search:before{
+  color: white;
+  /*padding-top: 5px;*/
+}
+.navbar .navbar-form .form-control {
+  height: 20px;
+  width: 150px;
+  border-radius: 50px;
+  background-color: #8091B4;
+  border: none;
+  padding: 0 10px;
+  color: #fffdfd;
+}
+.navbar .navbar-form span {
+  color: #C7CAC1;
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 5px;
+}
+.navbar .navbar-form > .btn {
+  padding: 0;
+}
+.top {
+  background: url("../images/top_bg.jpg") no-repeat;
+}
+.top.container-fluid {
+  padding-right: 0;
+  padding-left: 0;
+}
+.top .top_logo {
+  background: url("../images/top_icon.png") no-repeat;
+  background-position: right -20px;
+}
+.top .top_logo a {
+  display: block;
+  padding: 10px 0;
+}
+.top .top_logo a img {
+  vertical-align: middle;
+}
+.top > menu {
+  background: rgba(0, 0, 200, 0.2);
+  margin-top: 9px;
+  margin-bottom: 0;
+  position: relative;
+}
+.top > menu.container-fluid {
+  padding-left: 0;
+  padding-right: 0;
+}
+.top > menu > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  font-size: 16px;
+}
+.top > menu > div dl {
+  margin-bottom: 0;
+}
+.top > menu > div dl:hover dd {
+  display: block;
+}
+.top > menu > div dl dt {
+  cursor: pointer;
+  color: white;
+  line-height: 40px;
+  padding: 0 30px;
+  font-weight: 200;
+}
+.top > menu > div dl dd {
+  display: none;
+  position: absolute;
+  background-color: rgba(222, 222, 222, 0.81);
+  left: 0;
+  right: 0;
+  top: 40px;
+  line-height: 35px;
+  padding: 0 250px;
+  z-index: 20;
+}
+.top > menu > div dl dd a {
+  padding: 0 20px;
+  color: black;
+  white-space: nowrap;
+}
+footer.container-fluid {
+  background: url("../images/footer_bg.jpg") no-repeat;
+  color: white;
+  padding-left: 0;
+  padding-right: 0;
+  margin-top: 30px;
+}
+footer.container-fluid p {
+  font-size: 13px;
+  line-height: 12px;
+  cursor: pointer;
+}
+footer.container-fluid > div.container {
+  padding-top: 30px;
+}
+footer.container-fluid > div.container div.col-md-3 > h4 {
+  font-size: 15px;
+  padding-bottom: 8px;
+  border-bottom: 1px white solid;
+  margin-bottom: 15px;
+}
+footer.container-fluid > p {
+  line-height: 40px;
+  background-color: #041438;
+  text-align: center;
+  margin-top: 20px;
+  color: #7a87a3;
+}
